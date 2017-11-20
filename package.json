@@ -7,7 +7,7 @@
     "lint": "eslint src test",
     "test": "nyc mocha",
     "watch:test": "mocha --watch",
-    "validate": "npm-run-all --parallel lint test"
+    "validate": "npm-run-all --parallel test lint"
   },
   "repository": {
     "type": "git",
@@ -37,12 +37,7 @@
     "functions": 100,
     "lines": 100,
     "statements": 100,
-    "reporter": [
-      "text",
-      "lcov"
-    ],
-    "include": [
-      "src"
-    ]
+    "reporter": ["text", "lcov"],
+    "include": ["src"]
   }
 }
