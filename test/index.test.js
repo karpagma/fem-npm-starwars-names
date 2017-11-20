@@ -1,26 +1,20 @@
-'use strict';
+import { expect } from 'chai';
+import starWarsNames from '../src';
 
-var expect = require('chai').expect;
-const starWarsNames = require('../src');
-
-describe('starwars-names', function() {
-  it('should have a list of all available names', function() {
+describe('starwars-names', () => {
+  it('should have a list of all available names', () => {
     expect(starWarsNames.all).to.satisfy(isArrayOfStrings);
   });
 
-  it('should allow me to get a random name from the list', function() {
+  it('should allow me to get a random name from the list', () => {
     expect(starWarsNames.random()).to.satisfy(isIncludedIn(starWarsNames.all));
   });
 });
 
 function isArrayOfStrings(array) {
-  return array.every(function(i) {
-    return typeof i === 'string';
-  });
+  return array.every(i => typeof i === 'string');
 }
 
 function isIncludedIn(array) {
-  return function(item) {
-    return array.includes(item);
-  };
+  return item => array.includes(item);
 }
