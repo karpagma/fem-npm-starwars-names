@@ -11,7 +11,7 @@ describe('starwars-names', () => {
   });
 
   it('should return first name', () => {
-    expect(starWarsNames.getFirst()).to.equal(starWarsNames.all[0]);
+    expect(starWarsNames.getFirstName()).to.equal(starWarsNames.all[0]);
   });
 });
 
