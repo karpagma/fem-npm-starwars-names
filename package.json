@@ -1,6 +1,6 @@
 {
   "name": "karma-starwars-names",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "dummy package to learnpublishingnpm package",
   "main": "dist/index.js",
   "scripts": {
