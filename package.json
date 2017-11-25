@@ -1,6 +1,6 @@
 {
   "name": "karma-starwars-names",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "dummy package to learnpublishingnpm package",
   "main": "dist/index.js",
   "scripts": {
@@ -20,7 +20,9 @@
     "url": "git+https://github.com/karpagma/fem-npm-starwars-names.git"
   },
   "author": "",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/karpagma/fem-npm-starwars-names/issues"
@@ -54,17 +56,28 @@
     "functions": 100,
     "lines": 100,
     "statements": 100,
-    "reporter": ["text", "lcov"],
+    "reporter": [
+      "text",
+      "lcov"
+    ],
     "instrument": false,
     "sourceMap": false,
-    "require": ["babel-register"],
-    "include": ["src"]
+    "require": [
+      "babel-register"
+    ],
+    "include": [
+      "src"
+    ]
   },
   "babel": {
-    "presets": ["es2015"],
+    "presets": [
+      "es2015"
+    ],
     "env": {
       "test": {
-        "plugins": ["istanbul"]
+        "plugins": [
+          "istanbul"
+        ]
       }
     }
   },
