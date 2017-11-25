@@ -4,6 +4,7 @@
   "description": "dummy package to learn publishing npm package",
   "main": "dist/index.js",
   "scripts": {
+    "commit": "git-cz",
     "prebuild": "rimraf dist",
     "build": "npm-run-all --parallel build:*",
     "build:main": "babel --copy-files --out-dir dist src",
@@ -21,9 +22,7 @@
     "url": "https://github.com/karpagma/fem-npm-starwars-names.git"
   },
   "author": "",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/karpagma/fem-npm-starwars-names/issues"
@@ -61,34 +60,27 @@
     "functions": 100,
     "lines": 100,
     "statements": 100,
-    "reporter": [
-      "text",
-      "lcov"
-    ],
+    "reporter": ["text", "lcov"],
     "instrument": false,
     "sourceMap": false,
-    "require": [
-      "babel-register"
-    ],
-    "include": [
-      "src"
-    ]
+    "require": ["babel-register"],
+    "include": ["src"]
   },
   "babel": {
-    "presets": [
-      "es2015"
-    ],
+    "presets": ["es2015"],
     "env": {
       "test": {
-        "plugins": [
-          "istanbul"
-        ]
+        "plugins": ["istanbul"]
       }
     }
   },
   "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    },
     "ghooks": {
-      "pre-commit": "npm run validate"
+      "pre-commit": "npm run validate",
+      "commit-msg": "validate-commit-msg"
     }
   }
 }
