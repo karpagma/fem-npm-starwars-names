@@ -9,6 +9,10 @@ describe('starwars-names', () => {
   it('should allow me to get a random name from the list', () => {
     expect(starWarsNames.random()).to.satisfy(isIncludedIn(starWarsNames.all));
   });
+
+  it('should return first name', () => {
+    expect(starWarsNames.getFirst()).to.equal(starWarsNames.all[0]);
+  });
 });
 
 function isArrayOfStrings(array) {
