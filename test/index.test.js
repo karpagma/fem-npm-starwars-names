@@ -13,6 +13,10 @@ describe('starwars-names', () => {
   it('should return first name', () => {
     expect(starWarsNames.getFirstName()).to.equal(starWarsNames.all[0]);
   });
+
+  it('should return second name', () => {
+    expect(starWarsNames.getSecondName()).to.equal(starWarsNames.all[1]);
+  });
 });
 
 function isArrayOfStrings(array) {
